@@ -204,7 +204,7 @@ div#listmov body		{background-color:#00ADEF;}
 
 /* Select / dropdown liste og caption
  ==========================================*/
-#listarr .caption {
+#select .caption {
   font-family: "SourceSansProRegular","Helvetica Neue",Helvetica,"Lucida Sans Unicode",Arial,sans-serif;
   color: rgba(0,0,0,0.7);
   font-weight: normal;
