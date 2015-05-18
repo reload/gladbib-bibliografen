@@ -210,7 +210,7 @@ div#listmov body		{background-color:#00ADEF;}
   font-weight: normal;
   font-size: 16px;
   position: absolute;
-  top:  20px;
+  top:  20px; 
 }
 
 #select form table tbody tr:nth-child(2) td.caption {
@@ -310,3 +310,26 @@ div#listmov body		{background-color:#00ADEF;}
 #listarr table tbody tr td:nth-child(2) table tbody tr:nth-child(2) td table {
   margin-top: 4px;
 }
+
+/* IE8 Hack */
+@media \0screen  {
+  #select .caption {
+    position: relative;
+    top:  20px; 
+    left: 10px;
+  }
+
+  #select form table tbody tr {
+    position: relative;
+  }
+
+  #select form table tbody tr select {
+    position: relative;
+    top: 0px;
+  }
+}
+
+
+
+
+
