@@ -29,7 +29,7 @@ table.list      {border:1;padding:0;letter-spacing:0;}
 table.main   {border:0;padding:0;letter-spacing:0; width: 500px;}
 table.sub   {border:0;padding:0;letter-spacing:0; width: 90%;}
 
-td	{ font-family: verdana; font-size: 8pt; color: #000000; padding-left:2px; padding-right:2px;}
+td	{ font-family: verdana; font-size: 8pt; color: #000000; /* padding-left:2px; */ /* padding-right:2px; */}
 td.progressgauge	{padding:0px;}
 td.list-header	{background-color:#00ADEF; color:white; font-weight:bold;padding-left:5px;padding-right:5px;}
 td.list-contents{background-color:#EBEBEB;padding-left:5px;padding-right:5px;}
@@ -174,12 +174,23 @@ div#listmov td#item		{height:200px; width:140; padding:10px;}
 div#listmov input#select	{border:1px solid black;}
 div#listmov body		{background-color:#00ADEF;}
 
-/* 
- * Bibliografen CSS tilføjelser
- ======================================== */
+/* Bibliografen CSS - by Reload
+|======================================== 
+| This css is here to make enhance the userexperience
+| at: https://gladsaxe-stg.ddbcms.dk/program-0
+|
+| Please note, that some selectors has longer paths 
+| then others and has id's like #listarr infront of them
+| This is on purpose, since it's needed to override 
+| the original styles
+ */
 
-/* Layout ændringer
- ==========================================*/
+/* Global layout changes 
+|==========================================
+| These styles are for the overall styling of the 
+| iframe content
+*/
+
 #listarr {
   min-height: 0px;
 }
@@ -196,14 +207,28 @@ div#listmov body		{background-color:#00ADEF;}
   padding-right: 0;
 }
 
-/* Gem det indhold der ikke ses på skitsen
- ==========================================*/
+/* Hidden content
+|==========================================
+| On the sketches, the help block and 
+| the footer is hidden. 
+*/
 #listarr #help_bar, #listarr #address {
     display:  none;
 }
 
 /* Select / dropdown liste og caption
- ==========================================*/
+|==========================================
+| These styles are for styling the top area
+| of the iframe, containing the select boxes
+| 
+| Since all the markup is made with html tables
+| the idea behind this styling is to make the tr
+| display next to eachother and the td on top of
+| eachother. 
+| 
+| This is done by positioning the elements with 
+| position absolute
+*/
 #select .caption {
   font-family: "SourceSansProRegular","Helvetica Neue",Helvetica,"Lucida Sans Unicode",Arial,sans-serif;
   color: rgba(0,0,0,0.7);
@@ -217,6 +242,7 @@ div#listmov body		{background-color:#00ADEF;}
  left:  420px; width: 100px;
 }
 
+/* listarr is needed to override the original styles */
 #listarr #select form table {
   position: relative;
     background-color: #efefef;
@@ -228,8 +254,7 @@ div#listmov body		{background-color:#00ADEF;}
     height:  100px;
 }
 
-
- #listarr #select form table select {
+#listarr #select form table select {
   -moz-transition: all 0.15s linear;
   -o-transition: all 0.15s linear;
   -webkit-transition: all 0.15s linear;
@@ -271,17 +296,20 @@ div#listmov body		{background-color:#00ADEF;}
   top:  50px;  
 }
 
-
-
-/*  Film bokse 
- =================================================*/
+/*  Movie boxes 
+|=================================================
+| This styling is for the movie boxes displayed
+| on the frontpage of the iframe
+|
+| Most of the style is here for small visual adjustments
+*/
 
 #listarr #arrangements table {
   width: 100%;
   height:  0px;
 }
 
-#listarr #arrangements table tr td table tr td:first-child {
+#listarr #arrangements .movie-box-2xbox table tr td table tr td:first-child {
   width: 65px;
 }
 
@@ -311,7 +339,20 @@ div#listmov body		{background-color:#00ADEF;}
   margin-top: 4px;
 }
 
-/* IE8 Hack */
+/* IE8 Hack 
+|================================================
+| This is a hack to target IE8 specifically
+|
+| The hack is needed because IE8 does not support css3 selectors and 
+| the iframe that gets loaded in, does not contain a document type
+| and therefore it is not possible to use the css 2.1 selector "first-child"
+|
+| Another IE8 hack is "\9" but since that hack also get picked up by IE9, the 
+| media queri is the only viable option
+|
+| To read more about the hack: 
+| http://keithclark.co.uk/articles/moving-ie-specific-css-into-media-blocks/media-tests/
+*/
 @media \0screen  {
   #select .caption {
     position: relative;
@@ -328,8 +369,3 @@ div#listmov body		{background-color:#00ADEF;}
     top: 0px;
   }
 }
-
-
-
-
-
