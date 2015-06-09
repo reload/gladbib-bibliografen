@@ -14,7 +14,6 @@
 | These styles are for the overall styling of the 
 | iframe content
 */
-
 #listarr {
   min-height: 0px;
 }
@@ -87,15 +86,32 @@ table.main {
 | eachother. 
 | 
 | This is done by positioning the elements with 
-| position absolute
+| position absolute.
+|
+| IE8 Browser hack
+| Using :root as a pre selector, to only style IE8 + browsers. 
+| To target IE8, write the normal styles with root and then write the IE8 
+| specific styles without the :root selector;
+| Read mopre here: https://css-tricks.com/snippets/css/browser-specific-hacks/;
+|
 */
-#select .caption {
+:root #select .caption {
   font-family: "SourceSansProRegular","Helvetica Neue",Helvetica,"Lucida Sans Unicode",Arial,sans-serif;
   color: rgba(0,0,0,0.7);
   font-weight: normal;
   font-size: 16px;
   position: absolute;
   top:  20px; 
+}
+
+#select .caption {
+  font-family: "SourceSansProRegular","Helvetica Neue",Helvetica,"Lucida Sans Unicode",Arial,sans-serif;
+  color: rgba(0,0,0,0.7);
+  font-weight: normal;
+  font-size: 16px;
+  position: relative;
+  top:  0px; 
+  left: 10px;
 }
 
 #select form table tbody tr:nth-child(2) td.caption {
@@ -105,13 +121,13 @@ table.main {
 /* listarr is needed to override the original styles */
 #listarr #select form table {
   position: relative;
-    background-color: #efefef;
-    margin-bottom: 20px;
-    padding: 20px;
-    width: 100%;
-    max-width: 850px;
-    padding-bottom: 8px;
-    height:  100px;
+  background-color: #efefef;
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 850px;
+  padding-bottom: 8px;
+  height:  100px;
 }
 
 #listarr #select form table select {
@@ -143,17 +159,30 @@ table.main {
   left: 420px;
 }
 
-#select form table tbody tr {
+:root #select form table tbody tr {
   display: inline-block; 
   position: absolute; 
   top: 0px;
   width: 400px;
 }
 
-#select form table tbody tr select {
+#select form table tbody tr {
+  display: inline-block; 
+  position: relative; 
+  top: 0px;
+  width: 400px;
+}
+
+:root #select form table tbody tr select {
   width: 280px;
   position:  absolute;
   top:  50px;  
+}
+
+#select form table tbody tr select {
+  width: 280px;
+  position:  relative;
+  top:  0px;  
 }
 
 /*  Movie boxes 
@@ -197,35 +226,4 @@ table.main {
 
 #listarr table tbody tr td:nth-child(2) table tbody tr:nth-child(2) td table {
   margin-top: 4px;
-}
-
-/* IE8 Hack 
-|================================================
-| This is a hack to target IE8 specifically
-|
-| The hack is needed because IE8 does not support css3 selectors and 
-| the iframe that gets loaded in, does not contain a document type
-| and therefore it is not possible to use the css 2.1 selector "first-child"
-|
-| Another IE8 hack is "\9" but since that hack also get picked up by IE9, the 
-| media queri is the only viable option
-|
-| To read more about the hack: 
-| http://keithclark.co.uk/articles/moving-ie-specific-css-into-media-blocks/media-tests/
-*/
-@media \0screen  {
-  #select .caption {
-    position: relative;
-    top:  20px; 
-    left: 10px;
-  }
-
-  #select form table tbody tr {
-    position: relative;
-  }
-
-  #select form table tbody tr select {
-    position: relative;
-    top: 0px;
-  }
 }
