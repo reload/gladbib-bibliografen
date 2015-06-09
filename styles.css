@@ -196,6 +196,7 @@ table.main {
 #listarr #arrangements table {
   width: 100%;
   height:  0px;
+  margin-top: 10px;
 }
 
 #listarr #arrangements .movie-box-2xbox table tr td table tr td:first-child {
