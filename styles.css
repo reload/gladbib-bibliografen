@@ -19,10 +19,10 @@
   min-height: 0px;
 }
 
-#listarr table.main {
+table.main {
   width: 850px;
   position: absolute;
-  top: 0px;
+  top: 10px;
   left: 0px;
 }
 
@@ -31,13 +31,49 @@
   padding-right: 0;
 }
 
+/* Newly added progressbar
+|==========================================*/
+.progressbar {
+  border: none;
+}
+
+.progressbar #pgrss_td {
+  background-color: #efefef;
+  font-family: "SourceSansProRegular","Helvetica Neue",Helvetica,"Lucida Sans Unicode",Arial,sans-serif;
+  color: rgba(0,0,0,0.7);
+}
+
 /* Hidden content
 |==========================================
 | On the sketches, the help block and 
 | the footer is hidden. 
 */
 #listarr #help_bar, #listarr #address {
-    display:  none;
+  display:  none;
+}
+
+/* Help bar - subpages
+|==========================================
+| Style the help bar on the subpages, 
+| so that it looks more like the rest of 
+| the design.
+*/
+#help_bar {
+  background-color: #fff;
+  border: none;
+}
+
+#pgrss_td, #pgrsshighlight_td {
+  border-left: none !important;
+  padding: 5px;
+}
+
+#help_bar .howto_text {
+  background-color: #fff;
+}
+
+#help_bar table tbody tr td table tbody tr td {
+  padding-left: 0px !important;
 }
 
 /* Select / dropdown liste og caption
