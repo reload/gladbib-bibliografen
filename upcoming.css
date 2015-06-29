@@ -1,0 +1,75 @@
+body {
+  font-family: Tahoma, Verdana, Helvetica, Sans-serif, Arial;
+  font-size: 11px;
+  font-weight: normal;
+  color: black;
+  line-height : 12px;
+}
+
+p  {
+  margin:0px;
+  margin-bottom:5px;
+  padding:0px;
+}
+
+p.header1  {
+  font-family: Tahoma, Verdana;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+p.header2  {
+  font-family: Tahoma, Verdana;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+td {
+  font-family: Tahoma, Verdana;
+  font-size: 11px;
+}
+
+a:link {
+  font-family: Tahoma, Verdana;
+  font-size: 11px;
+  font-decoration: none;
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  font-family: Tahoma, Verdana;
+  font-size: 11px;
+  font-decoration: none;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  font-family: Tahoma, Verdana;
+  font-size: 11px;
+  font-decoration: none;
+  text-decoration: underline;
+  color: black;
+}
+
+.text {
+  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: normal;
+  font-weight: normal;
+  border: 1px solid #00ADEF;
+  background-color: white;
+}
+
+.knap {
+  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: normal;
+  font-weight: bold;
+  border: 0px solid #999999;
+  background-color: #00ADEF;
+  cursor: hand;
+  padding-top:3px;
+  padding-bottom:3px;
+}
