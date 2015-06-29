@@ -34,6 +34,7 @@ table.main {
 |==========================================*/
 .progressbar {
   border: none;
+  display: none;
 }
 
 .progressbar #pgrss_td {
