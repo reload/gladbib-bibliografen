@@ -1,75 +1,65 @@
 body {
-  font-family: Tahoma, Verdana, Helvetica, Sans-serif, Arial;
-  font-size: 11px;
-  font-weight: normal;
-  color: black;
-  line-height : 12px;
-}
-
-p  {
-  margin:0px;
-  margin-bottom:5px;
-  padding:0px;
-}
-
-p.header1  {
-  font-family: Tahoma, Verdana;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-p.header2  {
-  font-family: Tahoma, Verdana;
-  font-size: 14px;
-  font-weight: bold;
+  color: rgba(0,0,0,0.7);
+  font-family: "SourceSansProRegular","Helvetica Neue",Helvetica,"Lucida Sans Unicode",Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 td {
-  font-family: Tahoma, Verdana;
-  font-size: 11px;
+  padding: 0px !important;
 }
 
-a:link {
-  font-family: Tahoma, Verdana;
-  font-size: 11px;
-  font-decoration: none;
-  text-decoration: none;
-  color: black;
+td.table_bg {
+  background-color: #eee !important;
+  border-bottom: none !important;
+  padding: 5px 10px 0px 10px !important;
+  width: 100%;
+  max-width: 810px;
 }
 
-a:visited {
-  font-family: Tahoma, Verdana;
-  font-size: 11px;
-  font-decoration: none;
-  text-decoration: none;
-  color: black;
+body table tbody tr td table tbody tr {
+  float: left;
+  margin-bottom: 10px !important;
+  width: 100%;
+  max-width: 830px;
 }
 
-a:hover {
-  font-family: Tahoma, Verdana;
-  font-size: 11px;
-  font-decoration: none;
-  text-decoration: underline;
-  color: black;
+b {
+  line-height: 38px;
+  color: rgba(76,76,76,0.5);
 }
 
-.text {
-  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  line-height: normal;
+p, td  {
+  color: rgba(0,0,0,0.7);
+  font-family: "SourceSansProRegular","Helvetica Neue",Helvetica,"Lucida Sans Unicode",Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+p {
+  max-width: 440px
+}
+
+p.header2  {
+  font-size: 180%;
+  font-family: "SourceSansProSemibold", "Helvetica Neue", Helvetica, "Lucida Sans Unicode",Arial,sans-serif;
   font-weight: normal;
-  border: 1px solid #00ADEF;
-  background-color: white;
+  line-height: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-rendering: optimizeLegibility;
 }
 
-.knap {
-  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  line-height: normal;
-  font-weight: bold;
-  border: 0px solid #999999;
-  background-color: #00ADEF;
-  cursor: hand;
-  padding-top:3px;
-  padding-bottom:3px;
+a {
+  background-color: #bb251e;
+  font-family: "SourceSansProSemibold", "Helvetica Neue", Helvetica, "Lucida Sans Unicode",Arial,sans-serif;
+  color: #fffffd;
+  padding: 3px 10px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none;
 }
