@@ -14,14 +14,12 @@ td.table_bg {
   border-bottom: none !important;
   padding: 5px 10px 0px 10px !important;
   width: 100%;
-  max-width: 810px;
+  max-width: 670px;
 }
 
 body table tbody tr td table tbody tr {
   float: left;
   margin-bottom: 10px !important;
-  width: 100%;
-  max-width: 830px;
 }
 
 b {
