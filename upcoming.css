@@ -42,7 +42,7 @@ p.header2 {
   font-size: 180%;
   font-family: "SourceSansProSemibold", "Helvetica Neue", Helvetica, "Lucida Sans Unicode",Arial,sans-serif;
   font-weight: normal;
-  line-height: 0;
+  line-height: 1;
   margin-top: 0;
   margin-bottom: 10px;
   text-rendering: optimizeLegibility;
