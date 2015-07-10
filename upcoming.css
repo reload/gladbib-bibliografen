@@ -12,14 +12,20 @@ td {
 td.table_bg {
   background-color: #eee !important;
   border-bottom: none !important;
-  padding: 5px 10px 0px 10px !important;
+  padding: 0px 10px 0px 10px !important;
   width: 100%;
-  max-width: 510px;
+}
+
+body table tbody tr td table tbody {
+  vertical-align: top;
 }
 
 body table tbody tr td table tbody tr {
-  float: left;
-  margin-bottom: 10px !important;
+  display: inline-block;
+  max-width: 400px;
+  box-sizing: border-box;;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 b {
